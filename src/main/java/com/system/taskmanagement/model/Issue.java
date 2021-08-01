@@ -20,6 +20,9 @@ public class Issue {
     @GeneratedValue
     private Integer id;
     private String issueTitle;
-   // private User issueOwner;
+    private String issueDetail;
+
+
+    // private User issueOwner;
 
 }
