@@ -16,10 +16,11 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Builder
 @Table(name="users")
-public class User {
+public class Users {
     @Id
     @GeneratedValue
     private Integer id;
+    private String name;
     private String username;
 
 
