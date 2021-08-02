@@ -23,6 +23,11 @@ public class Users {
     private String name;
     private String username;
 
+    public Users(String name, String username) {
+        this.name = name;
+        this.username = username;
+    }
+
 
 }
 

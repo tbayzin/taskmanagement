@@ -1,7 +1,7 @@
 package com.system.taskmanagement.service;
 
-import com.system.taskmanagement.model.Issue;
-import com.system.taskmanagement.repository.IssueRepository;
+import com.system.taskmanagement.model.Users;
+import com.system.taskmanagement.repository.UsersRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -9,10 +9,11 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class UserService {
 
-    private final IssueRepository issueRepository;
+   private final UsersRepository usersRepository;
 
-    public Issue save(Issue issue) {
-        return issueRepository.save(issue);
+
+    public Users save(Users users) {
+        return usersRepository.save(users);
     }
 
 
