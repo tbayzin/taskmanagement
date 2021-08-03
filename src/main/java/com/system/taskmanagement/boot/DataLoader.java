@@ -1,16 +1,15 @@
 package com.system.taskmanagement.boot;
 
 import com.system.taskmanagement.model.Users;
-import com.system.taskmanagement.service.UserService;
+import com.system.taskmanagement.service.UsersService;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.User;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
 public class DataLoader implements CommandLineRunner {
-    private final UserService userService;
+    private final UsersService userService;
 
 
     @Override
