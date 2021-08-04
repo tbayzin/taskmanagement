@@ -46,6 +46,7 @@ public class UsersController {
     }
 
 
+    //UpdateUsers
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.CREATED)
     public Users updateUsers(@PathVariable Integer id, @RequestBody Users users) {

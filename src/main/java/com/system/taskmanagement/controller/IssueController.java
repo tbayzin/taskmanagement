@@ -17,6 +17,7 @@ public class IssueController {
 
     private final IssueService issueService;
 
+    //saveIssue
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping()
     public Issue saveIssue(@RequestBody Issue issue) {
@@ -47,7 +48,7 @@ public class IssueController {
         issueService.deleteIssueById(id);
     }
 
-
+    //updateIssue
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.CREATED)
     public Issue updateIssue(@PathVariable Integer id, @RequestBody Issue issue) {
