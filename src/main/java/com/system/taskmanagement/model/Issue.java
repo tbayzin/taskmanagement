@@ -7,15 +7,15 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name="issue")
+@Entity
 public class Issue {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
     private String issueTitle;
     private String issueDetail;
