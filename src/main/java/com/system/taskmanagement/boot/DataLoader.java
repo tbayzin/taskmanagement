@@ -20,7 +20,7 @@ public class DataLoader implements CommandLineRunner {
         ivan.setUsername("ivanDrago_98");
 
 
-        Users katerina = new Users("Katerina Anatolievna","lemon-Katya");
+        Users katerina = new Users("Katerina Anatolievna","lemon_Katya");
 
         userService.save(ivan);
         userService.save(katerina);

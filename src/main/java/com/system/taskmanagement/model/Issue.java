@@ -14,6 +14,11 @@ import javax.persistence.*;
 @Builder
 @Table(name="issue")
 public class Issue {
+    private IssueStatus issueStatus;
+    public enum IssueStatus {
+        OPEN,
+        DONE;
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -23,6 +28,8 @@ public class Issue {
     public Issue(String issueTitle, String issueDetail) {
         this.issueTitle = issueTitle;
         this.issueDetail = issueDetail;
+
+
     }
 // private User issueOwner;
 
