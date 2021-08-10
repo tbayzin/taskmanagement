@@ -14,14 +14,24 @@ import javax.persistence.*;
 @Builder
 @Entity
 public class Issue {
+
+
+    /*
     private IssueStatus issueStatus;
     public enum IssueStatus {
         OPEN,
         DONE;
-    }
+    } */
+
+
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
+
+    @ManyToOne
+    private Users users;
+
+
     private String issueTitle;
     private String issueDetail;
 
@@ -31,6 +41,6 @@ public class Issue {
 
 
     }
-// private User issueOwner;
+// private User issueOwner;6
 
 }

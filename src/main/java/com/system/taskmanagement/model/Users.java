@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
 
 
 @Data
@@ -17,6 +19,10 @@ public class Users {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
+
+    @OneToMany(mappedBy = "users")
+    private List<Issue> issuesOfUser;
+
     private String name;
     private String username;
 
