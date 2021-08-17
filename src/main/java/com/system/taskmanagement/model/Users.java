@@ -16,6 +16,7 @@ import java.util.Set;
 @Builder
 @Entity
 public class Users {
+    
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
