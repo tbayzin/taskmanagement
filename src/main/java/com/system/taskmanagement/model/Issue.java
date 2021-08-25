@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 
@@ -35,12 +36,7 @@ public class Issue {
     private String issueTitle;
     private String issueDetail;
 
-    public Issue(String issueTitle, String issueDetail) {
-        this.issueTitle = issueTitle;
-        this.issueDetail = issueDetail;
-
-
-    }
-// private User issueOwner;6
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private String updatedOn;
 
 }
