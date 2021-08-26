@@ -1,5 +1,6 @@
 package com.system.taskmanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,12 +16,14 @@ import java.util.Set;
 @NoArgsConstructor
 @Builder
 @Entity
+
 public class Users {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "users")
     private List<Issue> issuesOfUser;
 
