@@ -16,7 +16,7 @@
     <properties>
 
        <property name=" hibernate.jdbc.time_zone" value="UTC"/>
-        
+
         <java.version>11</java.version>
     </properties>
     <dependencies>
