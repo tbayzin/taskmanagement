@@ -1,3 +1,4 @@
+
 package com.system.taskmanagement.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -27,7 +28,6 @@ public class Issue {
     @JsonBackReference
     @ManyToOne
     private Users users;
-
 
     private String issueTitle;
     private String issueDetail;

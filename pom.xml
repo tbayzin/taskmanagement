@@ -14,6 +14,9 @@
     <name>taskmanagement</name>
     <description>taskmanagement</description>
     <properties>
+
+       <property name=" hibernate.jdbc.time_zone" value="UTC"/>
+        
         <java.version>11</java.version>
     </properties>
     <dependencies>
@@ -41,6 +44,8 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+
+
 
         <dependency>
             <groupId>org.postgresql</groupId>
