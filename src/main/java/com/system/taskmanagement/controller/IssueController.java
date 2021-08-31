@@ -1,8 +1,6 @@
 package com.system.taskmanagement.controller;
 
-
 import com.system.taskmanagement.model.Issue;
-import com.system.taskmanagement.model.Users;
 import com.system.taskmanagement.service.IssueService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -24,7 +22,6 @@ public class IssueController {
         return issueService.save(issue);
     }
 
-
     //GetIssueById
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/{id}")
@@ -32,7 +29,12 @@ public class IssueController {
         return issueService.getIssueById(id);
     }
 
-
+    //GetIssueByTitle
+    @RequestMapping(value = "/find/{issueTitle}", method = RequestMethod.GET)
+    @ResponseBody
+    public Issue getIssueByIssueTitle(@PathVariable String issueTitle) {
+        return issueService.getIssueByIssueTitle(issueTitle);
+    }
 
     // getAllIssues
     @ResponseStatus(HttpStatus.OK)
@@ -54,6 +56,4 @@ public class IssueController {
     public Issue updateIssue(@PathVariable Integer id, @RequestBody Issue issue) {
         return issueService.updateIssue(id, issue);
     }
-
-
 }

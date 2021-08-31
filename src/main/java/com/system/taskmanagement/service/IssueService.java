@@ -26,11 +26,13 @@ public class IssueService {
         return issueRepository.getIssueById(id);
     }
 
+    public Issue getIssueByIssueTitle(String issueTitle) {
+        return issueRepository.getIssueByIssueTitle(issueTitle);
+    }
 
     public List<Issue> getAllIssue() {
         return issueRepository.findAll();
     }
-
 
     public void deleteIssueById(Integer id) {
         issueRepository.deleteById(id);
