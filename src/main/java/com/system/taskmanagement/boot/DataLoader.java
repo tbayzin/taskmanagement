@@ -18,9 +18,10 @@ public class DataLoader implements CommandLineRunner {
         Users ivan = new Users();
         ivan.setName("Ivan Dragomov");
         ivan.setUsername("ivanDrago_98");
+        ivan.setPassword("123mosk_");
+        ivan.setEmail("ivanzolotov@gmail.com");
 
-
-        Users katerina = new Users("Katerina Anatolievna","lemon_Katya");
+        Users katerina = new Users("Katerina Anatolievna","lemon_Katya","katanatolina@gmail.com","secPass2_1");
 
         userService.save(ivan);
         userService.save(katerina);

@@ -16,10 +16,11 @@ import java.util.List;
 public class UsersController {
     private final UsersService usersService;
 
-    //SaveUsers
+
+    //RegisterUser
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping()
-        public Users saveUsers(@RequestBody Users users) {
+    @PostMapping("/register")
+        public Users registerUsers(@RequestBody Users users) {
         return usersService.save(users);
     }
 
